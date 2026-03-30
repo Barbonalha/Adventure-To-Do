@@ -11,8 +11,8 @@ export default function AdventureHome() {
   const [task, setTask] = useState("");
   const [mission, setMission] = useState("");
   const [category, setCategory] = useState("dates");
-  const [tasks, setTasks] = useState([]);
-  const [missions, setMissions] = useState([]);
+  const [tasks, setTasks] = useState<{ text: string; done: boolean; category: string }[]>([]);
+  const [missions, setMissions] = useState<{ text: string; progress: number }[]>([]);
 
   useEffect(() => {
     const storedTasks = localStorage.getItem("advHome_tasks");
