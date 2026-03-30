@@ -29,7 +29,7 @@ export default function AdventureHome() {
     localStorage.setItem("advHome_tasks", JSON.stringify(newTasks));
   };
 
-  const toggleTask = (index) => {
+  const toggleTask = (index: number) => {
     const updated = [...tasks];
     updated[index].done = !updated[index].done;
     setTasks(updated);
@@ -44,20 +44,20 @@ export default function AdventureHome() {
     localStorage.setItem("advHome_missions", JSON.stringify(newMissions));
   };
 
-  const updateMissionProgress = (index, value) => {
+  const updateMissionProgress = (index: number, value: number) => {
     const updated = [...missions];
     updated[index].progress = Math.min(100, Math.max(0, value));
     setMissions(updated);
     localStorage.setItem("advHome_missions", JSON.stringify(updated));
   };
 
-  const removeTask = (index) => {
+  const removeTask = (index: number) => {
     const updated = tasks.filter((_, i) => i !== index);
     setTasks(updated);
     localStorage.setItem("advHome_tasks", JSON.stringify(updated));
   };
 
-  const removeMission = (index) => {
+  const removeMission = (index: number) => {
     const updated = missions.filter((_, i) => i !== index);
     setMissions(updated);
     localStorage.setItem("advHome_missions", JSON.stringify(updated));
