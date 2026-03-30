@@ -63,7 +63,7 @@ export default function AdventureHome() {
     localStorage.setItem("advHome_missions", JSON.stringify(updated));
   };
 
-  const colors = {
+  const colors: Record<string, string> = {
     dates: "bg-pink-200 border-pink-300 text-pink-900",
     viagens: "bg-blue-200 border-blue-300 text-blue-900",
     trilhas: "bg-green-200 border-green-300 text-green-900",
