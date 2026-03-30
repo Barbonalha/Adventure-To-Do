@@ -368,7 +368,7 @@ export default function AdventureHome() {
             <div className="flex gap-3 items-center">
               <Input
                 value={task}
-                onChange={(e) => setTask(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTask(e.target.value)}
                 placeholder="Adicionar nova ideia..."
                 className="rounded-xl"
               />
@@ -509,8 +509,8 @@ export default function AdventureHome() {
             <div className="flex gap-2 items-center">
               <Input
                 value={mission}
-                onChange={(e) => setMission(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && addMission()}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMission(e.target.value)}
+                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && addMission()}
                 placeholder="Ex: 5 trilhas, 1 acampamento..."
                 className="rounded-2xl border-neutral-200 focus:border-emerald-400"
               />
